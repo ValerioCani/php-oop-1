@@ -26,15 +26,15 @@ class Movie {
     } 
 
     public function getMovieAge($release_year){
-        return 2022 - $release_year;
+        $movie_age = 2022 - $release_year;
+        echo "<h2>This Movie is $movie_age years old!!</h2>";
+
     }
 }
 
 
 $Avatar = new Movie("Avatar", "James Cameron", 2009, 7.5);
-$movie_age = $Avatar->getMovieAge(2009);
-echo "<h2>This Movie is $movie_age years old!!</h2>";
+$Avatar->getMovieAge(2009);
 
 $NoCountryForOldMan = new Movie("NoCountryForOldMan", "Joel Coen", 2007, 7.9);
-$movie_age = $NoCountryForOldMan->getMovieAge(2007);
-echo "<h2>This Movie is $movie_age years old!!</h2>";
+$NoCountryForOldMan->getMovieAge(2007);
